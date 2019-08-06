@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+<title>Ink Transition Effect | CodyHouse</title>
+</head>
+<body>
+<main class="cd-main-content">
+	<div class="center">
+		<a href="#0" class="cd-btn cd-modal-trigger">好东西都是要使劲砸的</a><br><br><br>
+	</div>
+
+
+<div class="cd-modal">
+	<div class="modal-content">
+		<h1>小喵，七夕快乐</h1>
+		
+		<p>
+			记得5月1日那天，我们刚从叔叔游乐园出来，不知道怎么扯到过节这个话题了，你说你最不喜欢的就是520这种生造的扯淡的节日，处处体现着现代人的浮躁，你喜欢过传统的节日。那时我就在想，七夕我要怎么跟你度过，我要送个什么礼物给你。起初想的是这一天一定要带你去做你从未做过的事，送你一个不曾有人送过的东西。然后你6月去了柬埔寨，计划打破，没得想了。到了7月，我冒出了一个大胆的想法，如果8月7日这一天我拿着礼物突然出现在你面前会不会很浪漫。可是石榴项目落在了我头上，8月对我来说，只能窝在会理，哪儿也去不了。于是我懵逼了，相隔千里，礼物是送不了，直接打钱你会鄙视我一辈子，最苦恼的是，连一个拥抱都给不了你。我们之间的第一个七夕，难道就要这样毫无波澜，毫无记忆点么，将来老的时候，我会痛恨自己这一天不做点什么。就在前两天，我们之间的挖空比赛给我了灵感，数独+二维码+网页+文字+编码+解密=不一样的礼物，不一样的记忆。许久没碰代码，一脸懵逼。心里知道一定会弄出来，但还是搞了很久。希望你会喜欢，会在以后的某个日子能记住这个傻逼大萝卜，在这一天干了这么一件很傻逼的事。
+		</p>
+		<p>
+			既然傻逼的事已经做了，那我就趁次机会好好跟你说说心里话吧，平时当着你的面我说不出来，不是故意不说，是组织不起来语言，你的大萝卜就是这么个大笨蛋。在刚认识你的时候，我觉得你是个很好的女孩，那是第一次产品会后大家一起吃盒饭，你坐我旁边闲聊了两句之后的第一印象。熟悉之后从平时的聊天和朋友圈得知你经常一个人旅游，一个人到处走走，甚至过年也是一个人，让你在我心中的印象变得神秘起来，同时也有一点点心疼。讲真，那时对你有好感，但我没敢多想。后来苟总的一些异常举动，又让我变得很疑惑，当然也仅仅只是有疑惑而已（现在已经没有了，你解释过了）。
+		</p>
+		<p>
+			做不了你的快乐源泉，那我就做和你白头的人，陪你烹茶煮饭。
+			我不知道我做的饭合不合你胃口，但我尽量去尝试吧，今生只追求一件事，让你多吃饭，很开心的那种。
+		</p>
+	</div> <!-- .modal-content -->
+
+	<a href="#0" class="modal-close">Close</a>
+</div> <!-- .cd-modal -->
+
+<div class="cd-transition-layer"> 
+	<div class="bg-layer"></div>
+</div> <!-- .cd-transition-layer -->
+	
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+
+  export default {
+    components: {
+    },
+    data () {
+      return {
+        msg:'',
+        msgLength:0,
+      }
+    },
+    created() {
+    },
+    computed: {
+    },
+    watch:{
+      msg(curVal){
+        if(/[^\d]/g.test(curVal)){
+          this.msg = this.msg.replace(/[^\d]/g,'');
+        }else{
+            this.msgLength = curVal.length;
+        }
+      },
+    },
+    methods: {
+      focus(){
+          this.$refs.pwd.focus();
+      },
+    }
+  }
+
+</script>
+</body>
+</html>
